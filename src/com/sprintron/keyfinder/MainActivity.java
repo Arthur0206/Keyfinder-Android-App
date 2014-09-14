@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.sprintron.keyfinder.activity.DeviceControlActivity;
 import com.sprintron.keyfinder.adapter.LeDeviceListAdapter;
 
 public class MainActivity extends ListActivity {
@@ -120,7 +121,7 @@ public class MainActivity extends ListActivity {
         final BluetoothDevice device = mLeDeviceListAdapter.getDevice(position);
         if (device == null) return;
         Toast.makeText(this, "click device: "+device.toString(), Toast.LENGTH_SHORT).show();
-        /*
+        
         final Intent intent = new Intent(this, DeviceControlActivity.class);
         intent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_NAME, device.getName());
         intent.putExtra(DeviceControlActivity.EXTRAS_DEVICE_ADDRESS, device.getAddress());
@@ -129,7 +130,7 @@ public class MainActivity extends ListActivity {
             mScanning = false;
         }
         startActivity(intent);
-        */
+        
     }
     
     // scan Le Device
