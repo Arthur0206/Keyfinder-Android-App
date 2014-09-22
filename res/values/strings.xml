@@ -19,6 +19,7 @@
     <string name="no_data">No data</string>
     <string name="unknown_characteristic">Unknown characteristic</string>
     <string name="unknown_service">Unknown service</string>
+    <string name="update_data">Update Data</string>
     
     <!-- Menu items -->
     <string name="menu_connect">Connect</string>

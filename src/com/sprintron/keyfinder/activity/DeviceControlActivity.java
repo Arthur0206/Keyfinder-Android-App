@@ -19,7 +19,10 @@ import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import asynctask.UpdateDevData;
 
 import com.sprintron.keyfinder.R;
 import com.sprintron.keyfinder.service.BluetoothLeService;
@@ -32,6 +35,7 @@ public class DeviceControlActivity extends Activity {
 
     private TextView mConnectionState;
     private TextView mDataField;
+    private Button mUpdateData;
     private String mDeviceName;
     private String mDeviceAddress;
     
@@ -55,6 +59,7 @@ public class DeviceControlActivity extends Activity {
         ((TextView) findViewById(R.id.device_address)).setText(mDeviceAddress);
         mConnectionState = (TextView) findViewById(R.id.connection_state);
         mDataField = (TextView) findViewById(R.id.data_value);
+        mUpdateData = (Button) findViewById(R.id.update_data_btn);
         
         // Show the Up button in the action bar.
         setupActionBar();
@@ -284,7 +289,6 @@ public class DeviceControlActivity extends Activity {
                     gattCharacteristic, true);
         }
     }
-
     
     private static IntentFilter makeGattUpdateIntentFilter() {
         final IntentFilter intentFilter = new IntentFilter();
@@ -295,5 +299,9 @@ public class DeviceControlActivity extends Activity {
         return intentFilter;
     }
     
+    public void updateDevData (View view) {
+        Log.v(LOG_TAG, "update dev data");
+        new UpdateDevData().execute();
+    }
 
 }
