@@ -1,4 +1,4 @@
-package asynctask;
+package com.sprintron.keyfinder.asynctask;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -20,6 +20,7 @@ public class UpdateDevData extends AsyncTask<String, String, String> {
     private final static String LOG_TAG = DeviceControlActivity.class.getSimpleName();
     //private final static String URL_UPDATEDEVDATA = "http://sprintron.com/pch/uploadDevData.php";
     private final static String URL_UPDATEDEVDATA = "http://sprintron.com/pch/postDevData.php";
+    //private final static String URL_UPDATEDEVDATA = "http://sprintron.com/pch/ConnectTest.php";
     private static final String TAG_SUCCESS = "success";
     //private static final String TAG_MESSAGE = "message";
 

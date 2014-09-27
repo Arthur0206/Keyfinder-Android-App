@@ -22,9 +22,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import asynctask.UpdateDevData;
 
 import com.sprintron.keyfinder.R;
+import com.sprintron.keyfinder.asynctask.UpdateDevData;
 import com.sprintron.keyfinder.service.BluetoothLeService;
 
 public class DeviceControlActivity extends Activity {
